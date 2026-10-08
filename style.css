@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --white: #fff;
+  --black: #000;
+  --purple-950: #301534;
+  --purple-600: #8B6990;
+  --purple-100: #F8EEFF;
+  --voilet-600: #AD28EB;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+    background-color: red;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Overpass', sans-serif;
+
+    .accordion__header {
+        display: flex;
+        align-items: center;
+        h1 {
+          
+        }
+    }
+}
+
