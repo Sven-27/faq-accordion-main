@@ -14,20 +14,50 @@
 }
 
 body {
-    background-color: red;
-    color: var(--white);
+    background-color: var(--purple-100);
+    color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Overpass', sans-serif;
-
-    .accordion__header {
-        display: flex;
-        align-items: center;
-        h1 {
-          
-        }
+    background: url('./assets/images/background-pattern-mobile.svg') no-repeat top center fixed;
+  
+    @media screen and (width > 600px){
+      background: url('./assets/images/background-pattern-desktop.svg') no-repeat top center fixed;
     }
+
+    .accordion{
+      display: flex;
+      flex-direction: column;
+      width: clamp(327px, 80vw, 600px);
+      padding: clamp(24px, 6vw, 40px);
+      border-radius: clamp(8px, 3vw, 16px);
+      background: red;
+
+      .accordion__header {
+          display: flex;
+          align-items: center;
+          h1 {
+            
+          }
+      }
+
+      details {
+        summary{
+          &:first-of-type{
+          list-style: none;    
+          }
+          &:last-of-type{
+            background: url('./assets/images/icon-plus.svg') no-repeat right center;
+          }
+        }
+      &[open] {
+        summary{
+          background: url('./assets/images/icon-minus.svg') no-repeat right center;
+        }
+      }
+    }
+
 }
 
