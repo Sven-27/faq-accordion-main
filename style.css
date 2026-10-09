@@ -55,8 +55,11 @@ body {
       details {
 
         summary{
-          line-height: 1.5;
+          line-height: 1.2;
           
+          @media screen and (width > 450px) {
+            line-height: 1.3;
+          }
 
           span{
             display: inline-block;
@@ -73,13 +76,13 @@ body {
           }
           &:last-of-type{
             background: url('./assets/images/icon-plus.svg') no-repeat right center;
-            background-size: 30px;
+            background-size: clamp(24px, 6vw, 30px);
           }
         }
       &[open] {
         summary:last-of-type {
           background: url('./assets/images/icon-minus.svg') no-repeat right center;
-
+          background-size: clamp(24px, 6vw, 30px);
         }
       }
       &:not(:first-of-type){
