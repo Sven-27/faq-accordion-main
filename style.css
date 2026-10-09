@@ -47,7 +47,7 @@ body {
             margin-right: 24px;
           }
           h1 {
-            font-size: clamp(32px, 6vw, 56px);
+            font-size: clamp(32px, 8vw, 56px);
             font-weight: 700;
           }
       }
@@ -55,22 +55,25 @@ body {
       details {
 
         summary{
-          /* padding-bottom: 24px; */
-          /* display: flex;
-          align-items: center; */
+          line-height: 1.5;
+          
 
           span{
             display: inline-block;
-            width: 20ch;
-            font-size: clamp(16px, 3vw, 24px);
+            width: 22ch;
+            font-size: clamp(16px, 3vw, 18px);
             font-weight: 600;
+
+            @media screen and (width > 700px) {
+              width: unset;
+            }
           }
           &:first-of-type{
           list-style: none;    
           }
           &:last-of-type{
             background: url('./assets/images/icon-plus.svg') no-repeat right center;
-
+            background-size: 30px;
           }
         }
       &[open] {
@@ -89,6 +92,8 @@ body {
 
       p{
         padding-top: 24px;
+        font-size: clamp(14px, 3vw, 16px);
+        color: var(--purple-600);
       }
     }
   }
